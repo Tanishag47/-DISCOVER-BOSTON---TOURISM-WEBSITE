@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
 // EVENTS API //
 
-    // API key from Ticket Master
+    // FREE API key from Ticket Master (CHANGING LATER)
     let API_KEY = "bWBQI5FIAv50Snzxw4AFQxPs4XNFZYcM";
 
     // connects div IDs to tabs 
