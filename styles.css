@@ -146,7 +146,7 @@ li > a:hover{
     font-size: 70px;
     color: #f8f8f8;
     position: absolute;
-    text-shadow: 2px 2px 5px #322f30;
+    text-shadow: 5px 5px 5px #322f30;
     padding-bottom: 2rem;
     padding-left: 30rem;
     margin-bottom: 100px;
@@ -164,6 +164,7 @@ li > a:hover{
     max-width: 850px;
     height: auto;
     padding-right: 30px;
+    
 }
 
 /** ALL ATTRACTIONS + TAB STYLES  **/
@@ -489,3 +490,5 @@ footer > div{
     color: #f8f8f8;
     padding: 30px 10px 10px 30px;   
 }
+
+/** MEDIA QUERIES **/
