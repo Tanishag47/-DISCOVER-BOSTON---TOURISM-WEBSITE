@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="libraries/slick.css">
+    <link rel="stylesheet" href="libraries/slick-theme.css">
+
+    <script src="libraries/jquery.min.js" defer></script>
+    <link rel="stylesheet" href="libraries/jquery-ui.min.css">
+    <script src="libraries/jquery-ui.min.js" defer></script>
+
+    <script src="libraries/slick.min.js" defer></script>
+    <script src="script.js" defer></script>
+
+    
+    <title>Discover Boston</title>
+</head>
+<body id="container">
+    <header>
+        <a href="index.html"><img id="logo" src="/Images/LOGO3Transparent.png" alt="Logo for Discover Boston"></a>
+        <h1 class="sr-only">Discover Boston EST. 1630</h1>
+
+        <nav>
+            <ul>
+                <li><a href="#history">HISTORY</a></li>
+                <li><a href="#attractions">ATTRACTIONS</a></li>
+                <li><a href="#events">EVENTS</a></li>
+                <li><a href="#planner">TRIP PLANNER</a></li>
+                <li><a href="#gallery">GALLERY</a></li>
+                <li><a href="#info">INFO</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="carousel_container">
+            <div class="carousel">
+                <div class="slide">
+                    <img class ="resize" src="/Images/OldStatehouse.webp" alt="A photo of the old statehouse in boston">
+                    <div class="slide_caption">
+                        <h2>DISCOVER <br><span>HISTORY</span></h2>
+                    </div>
+
+                </div>
+                <div class="slide">
+                    <img class ="resize" src="/Images/legalShelfishTower.jpg" alt="">
+                    <div class="slide_caption">
+                        <h2>DISCOVER <br><span>CULTURE</span></h2>
+                    </div>
+
+                </div>  
+                <div class="slide">
+                    <img  class ="resize" src="/Images/FenwayParkCouple.jpg" alt="A photo of a couple in the fenway feild">
+                    <div class="slide_caption">
+                        <h2>DISCOVER <br><span>FUN</span></h2>
+                    </div>
+
+                </div>
+                <div class="slide">
+                    <img class ="resize" src="/Images/CelticsGameWinFanSign.webp" alt="A photo of the Boston Harbor at sunset with a chain the front">
+                    <div class="slide_caption">
+                        <h2>DISCOVER <br><span>VIEWS</span></h2>
+                    </div>
+
+                </div>
+                <div class="slide">
+                    <img class ="resize" src="/Images/JasonTatumShot.jpg" alt="A photo of Jayson Tatum celebrating a win">
+                    <div class="slide_caption">
+                        <h2>DISCOVER <br><span>SPORTS</span></h2>
+                    </div>
+
+                </div>
+                <div class="slide">
+                    <img class="resize" src="/Images/BostonHarborSunsetChainRiver.webp" alt="A photo of Jayson Tatum celebrating a win">
+                    <div class="slide_caption">
+                        <h2>DISCOVER <br><span>BOSTON</span> </h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="history">
+            <div class="history_div">
+                <h2>WELCOME TO THE CITY<br></h2>
+                <p>Modern Boston invites you to wander cobblestone streets steeped in revolutionary lore before diving headfirst into a thriving, witty hub of innovation and culture. <br>Grab a lobster roll and explore everything from the high-tech startups of the Seaport to historic Faneuil Hall Marketplace, where merchants have hawked wares since 1742. You can follow the iconic Freedom Trail past the Old North Church in the morning and catch a cutting-edge show in the Theater District by evening; <br>there’s an adventure waiting everywhere you turn, bridging centuries with every step</p>
+                <img src="/Images/Zikam_bridge_shot.webp" alt="A photo of the zikam bridge">
+            </div>   
+        </section>
+
+        <section id="attractions">
+            <h2>TOP ATTRACTIONS IN BOSTON</h2>
+            <div id="jqtabs">
+                <ul>
+                    <li><a href="#museum_tab" >MUSEUMS</a></li>
+                    <li><a href="#hotspots_tab">HOTSPOTS</a></li>
+                    <li><a href="#landmarks_tab">LANDMARKS</a></li>
+                    <li><a href="#nightlife_tab">NIGHTLIFE</a></li>
+                </ul>
+
+                <div id="museum_tab">
+                    <div class="gridLayout">
+                        <div class="grid_img_info">
+                            <img src="/Images/baby-heads-on-the-MFA-lawn.jpg" alt="A photo of the outside of the Museum of Fine Arts with a big baby head">
+                            <h4>MUSEUM OF FINE ARTS</h4>
+                            <p>Discover a world of contemporary art - enriched in history, culture, and a multitude of artistic design.</p>
+                            <p><span class="bold">Location:</span> 465 Huntington Ave, Boston, MA 02115 </p>
+                        </div>
+
+                        <div class="grid_img_info">
+                            <img src="/Images/ISGM_Garden.webp">
+                            <h4>ISABELLA STEWART GARDNER MUSEUM</h4>
+                            <p>Founded by Isabella Stewart Gardner in 1903. A home turned into a museum full of European, Asian and American art from over centuries.</p>
+                            <p><span class="bold">Location:</span> 25 Evans Way, Boston, MA, 02115 </p>
+
+                        </div>
+
+                        <div class="grid_img_info">
+                            <img src="/Images/IllusionsMuseum2.jpg">
+                            <h4>MUSEUM OF ILLUSIONS</h4>
+                            <p>Discover a world full of surprises and illusions at this mind-blowing attraction. Stand on ceilings or stare into a hypnosis wheel. All fun in this house.</p>
+                            <p><span class="bold">Location:</span> 200 State St #2, Boston, MA 02109 </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="hotspots_tab">
+                    <div class="gridLayout">
+                        <div class="grid_img_info">
+                            <img src="/Images/downtownBoston.jpg" alt="A photo of downtown boston during the day">
+                            <h4>DOWNTOWN BOSTON</h4>
+                            <p>Explore restaurants, shopping, bars, and more in Bostons Historic Downtown area.</p>
+                        </div>
+
+                        <div class="grid_img_info">
+                            <img src="/Images/ChinaTownEntrance.webp" alt="An image of the entrance of china town in front of hotpot buffet">
+                            <h4>CHINA TOWN</h4>
+                            <p>Hot Pot ? Dim Sum ? Boba ? Discover the taste of authentic chinese cuisine in this hotspot location.</p>
+
+                        </div>
+
+                        <div class="grid_img_info">
+                            <img src="/Images/north-end-boston.jpg" alt="A photo in front of bovas in the north end">
+                            <h4>NORTH END</h4>
+                            <p>All roads lead to rome - or atleast here in boston! Explore the authentic flavor of Italy right here in Boston. AKA little Italy.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div id="landmarks_tab">
+                    <div class="gridLayout">
+                        <div class="grid_img_info">
+                            <img src="/Images/fenwayParkSign.jpg" alt="An image of the outside of fenway parks sign">
+                            <h4>FENWAY PARK</h4>
+                            <p>Home to the Boston Red Sox, Fenway Park is one of the most historic and loved ballparks in all of Major League Baseball. A visit here offers an authentic experience of baseballs history and a memorable experience for any sports fanatic.</p>
+                        </div>
+
+                        <div class="grid_img_info">
+                            <img src="/Images/quincyMarketMainHall.webp">
+                            <h4>FANUEIL HALL MARKET PLACE</h4>
+                            <p>Home to historical figures of the likes of Samuel Adams, Faneuil hall is  features Quincy Market, a bustling food hall with numerous shops and restaurants. Experience a vibrant atmosphere with a mix of history, shopping, dining, and street performers.</p>
+                            <p><span class="bold">Location:</span> 1 Faneuil Hall Square, Boston, MA 02109 </p>
+
+                        </div>
+
+                        <div class="grid_img_info">
+                            <img src="/Images/BostonTeaParty.webp">
+                            <h4>BOSTON TEA PARTY SHIP & MUSEUM</h4>
+                            <p>Travel back in time to 1773 and come aboard an authentically restored replica ship of the Boston Tea Party! Participate in the re-enactment of the historical event by throwing tea overboard into the Harbor, along with witnessing the only known surviving tea chest from the original event.</p>
+                            <p><span class="bold">Location:</span> 306 Congress Street Boston, MA 02210 </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div id="nightlife_tab">
+                    <div class="gridLayout">
+                        <div class="grid_img_info">
+                            <img src="/Images/JaylenBrownDunk.avif" alt="A photo of Jaylen Brown from the celtics slam dunking">
+                            <h4>TD GARDEN</h4>
+                            <p>Home of the Boston Celtics - The TD Garden offers many live events; From watching All star players like Jaylen Brown, to going to see you favorite artist in concert, this mega venue checks all the boxes of a perfect saturday night on the town.</p>
+                            <p><span class="bold">Location:</span> 100 Legends Way, Boston, MA 02114 </p>
+                        </div>
+
+                        <div class="grid_img_info">
+                            <img src="/Images/samuel-adams-flight.jpg" alt="A flight of sam adams beer">
+                            <h4>SAM ADAMS BREWERY</h4>
+                            <p> Come have a pint at this iconic brewery! Offering a range of unique, classic New England favorites, learn about the brewing process, participate in tastings and enjoy spaces where new beers are created.</p>
+                            <p><span class="bold">Location:</span> 30 Germania St, Boston, MA 02130 </p>
+                        </div>
+
+                        <div class="grid_img_info">
+                            <img src="/Images/HouseofBluesParty.jpg" alt="The entrance of the house of blues">
+                            <h4>HOUSE OF BLUES</h4>
+                            <p>Immerse yourself in the performances of all your favorite artist! Located next to Fenway Park, the house of blues has been the go-to spot for some of your favorite artists on the road tours.</p>
+                            <p><span class="bold">Location:</span> 15 Lansdowne St, Boston, MA 02215</p>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="events"> 
+            <h2>UPCOMING EVENTS</h2>
+            <p>Find something to do this week</p>
+            <div id="eventsDiv">
+                <ul>
+                    <li><a href="#concerts" data-type="Music">Concerts</a></li>
+                    <li><a href="#sports" data-type="Sports">Sports</a></li>
+                    <li><a href="#activities" data-type="Comedy">Attractions</a></li>
+                </ul>
+
+                <div id="concerts">
+                    <div class="events_gridLayout"></div>
+                </div>                
+
+                <div id="sports">
+                    <div class="events_gridLayout"></div>
+                </div> 
+               
+                <div id="activities">
+                    <div class="events_gridLayout"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="planner">
+            <h2>TRIP PLANNER</h2>
+            <p>Save your favorite activities here:</p>
+            <div id="user_input">
+                <label for="plan_input">Enter your trip plans here:
+                <input type="text" id="plan_input">
+                </label>
+                <input type="button" value="Add to List" id="add_btn"></input>
+                <input type="button" value="Clear List" id="clear_btn"></input>'
+                
+                <ol id="planner_list" ></ol>   
+            </div> 
+        </section>
+
+        <section id="gallery">
+            <h2>GALLERY</h2>
+            <p>"This is our f-----g city. And nobody's gonna dictate our freedom." - David Ortiz"</p>
+            <section class="rows">
+                <div class="columns">
+                    <img src="./Images/BostonHarborSunsetChainRiver.webp" alt="A sunset on the boston harbow with a chain in the forefront">
+                    <img src="./Images/Collin-Knight-Live-Like-a-Local-Tours-Boston.jpg" alt="A man looking at the nubian square sign">
+                    <img src="./Images/house-of-blues_Fenway_Sign.jpg" alt="House of blues fenway sign">  
+                    <img src="./Images/Harvard-Yard-Fall.jpg" alt="an image of harvard yard in the fall">
+                    
+                    
+                </div>
+                <div class="columns">
+                    <img src="./Images/TDGarden_Zikam.jpg" alt="The TD Garden with the zikam bridge "> 
+                    <img src="./Images/Christian-Science-Center-Boston.jpg" alt="the christian science museum">
+                     <img src="./Images/boston_tea_party_enactment.avif" alt="a reenactment of the boston tea party">
+                    <img src="./Images/MuseumScience.webp" alt="The Museum of science">
+                    <img src="./Images/boston-beer-co-samuel-adams-boston-lager-remastered2-1000x667-1.jpg" alt="sam adamss lager">
+                    <img src="./Images/downtownBoston.jpg">
+                    
+                      
+                </div>
+                <div class="columns">
+                    <img src="./Images/Isabella-Stewart-Gardner-Museum-scaled.jpg">
+                    <img src="./Images/ChinaTownEntrance.webp">
+                    <img src="./Images/MBTA_orange_line.webp">
+                    <img src="./Images/family_at_fenway.jpg">
+                    
+                       
+                </div>
+                <div class="columns">
+                    <img src="./Images/OSHaesthetic.jpg"> 
+                    <img src="./Images/Boston-Union-Oyster-House.jpeg">
+                    <img src="./Images/BeaconHillBrickSt.webp">
+                    <img src="./Images/1630_reenactment.avif"> 
+                    <img src="./Images/ParamountOutside.jpeg">         
+                </div>
+            </section>
+        </section>
+
+        <section id="info">
+            <h2>INFO</h2>
+            <p>Important Links & Information Sources</p>
+            <section class="info_rows">
+                <div class="info_columns">
+                    <h3>Boston City Hall</h3>
+                    <a href="https://www.boston.gov/visiting-boston" target="_blank"><img src="./Images/city-of-boston-seeklogo.png"></a>
+                    <p>Check out the city of boston's official site for more information </p>
+                </div>
+
+                <div class="info_columns">
+                    <h3>Event Brite</h3>
+                    <a href="https://www.eventbrite.com/d/ma--boston/events/" target="_blank"><img src="./Images/5841c48ba6515b1e0ad75aa4.png"></a>
+                    <p>Explore more exclusive events happening in the city</p>
+                </div>
+
+                <div class="info_columns">
+                    <h3>Meet Boston </h3>
+                    <a href="https://www.meetboston.com/" target="_blank"><img src="./Images/Meet_Boston_Logos_and_Marks-Full_807x.png" ></a>
+                    <p>Here you will find all necessary information for all your touring needs</p>
+                </div>  
+
+            </section>                
+                  
+        </section>
+    </main>
+    <footer>
+        <div>
+            <small>GIT 418 FALL B 2025 Programmed by Tanisha Garner</small><br>
+            <small>For Educational purposes only</small><br>
+            <small>All inspirational credit goes to the city if Boston & surrounding communities</small><br>
+            <small>Learn More about Boston Here</small>
+        </div>
+    </footer>
+    
+</body>
+</html>

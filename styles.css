@@ -1,0 +1,491 @@
+@import url('https://fonts.googleapis.com/css2?family=Caladea:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&display=swap');
+
+
+/* ------------------------------------------------------------------------ */
+/* HOME PAGE AND GLOBAL CSS SETTINGS */
+/* ------------------------------------------------------------------------ */
+*{
+    box-sizing: border-box;
+}
+
+#container{
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.sr-only{
+    display: none;
+}
+
+#logo{
+    width: 17em;
+    height: auto;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+header{
+	width: 100%;
+    height: 170px;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	padding: 1rem 10px;
+    background-color:  #f8f8f8;
+
+    font-family: "Alumni Sans Pinstripe", sans-serif;
+    font-weight: 800;
+    
+}
+
+body{
+    font-family: "Alumni Sans Pinstripe", sans-serif;
+}
+
+/* NAVIGATION USING FLEXBOX*/
+nav > ul{
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    margin-bottom: 0;
+    padding: 15px;
+    padding-left: 650px;
+    position: absolute; 
+    top: 5em; /* Aligning it to the top */
+    /*right: 0; /* Aligning it to the right */
+    margin-right:-120px;
+}
+
+nav > li{
+    display: inline;  
+    
+    
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    padding: 15px;
+    font-size: 25px; /* Makes font size bigger in nav*/
+}
+li > a:hover{
+    text-decoration: underline;
+}
+
+/** SLIDESHOW/CAROUSEL STYLES**/
+
+#carousel_container{
+    width: 100%; 
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 35rem;
+}
+
+/* Carousel Container*/
+.carousel{
+    width: 100%;
+    height: 600px;
+
+}
+
+.carousel > img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.resize{
+    width: 100%;
+    height: 80%;
+}
+
+.slide_caption{
+    
+    padding-bottom: 200px;
+    
+}
+.slide_caption > h2{
+    font-family: "League Spartan", sans-serif;
+    font-style: normal;
+    font-size: 100px;
+    text-align: center;
+    color: #322f30;
+    text-shadow: 2px 2px 5px black; 
+    letter-spacing: 10px;
+}
+
+ h2 > span{
+    font-family: "Alumni Sans Pinstripe", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+
+    letter-spacing: 10px;
+    color: #322f30; 
+}
+
+/** HISTORY/INTRO SECTION **/
+
+#history > div{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+    background-color: #f8f8f8;  
+    padding-top: 4rem;
+    padding-bottom: 2rem;  
+}
+
+.history_div > h2{
+    font-family: "League Spartan", sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 70px;
+    color: #f8f8f8;
+    position: absolute;
+    text-shadow: 2px 2px 5px #322f30;
+    padding-bottom: 2rem;
+    padding-left: 30rem;
+    margin-bottom: 100px;
+}
+
+.history_div > p{
+    color: #322f30;
+    font-size: 30px;
+    padding-left: 25px ;
+    line-height: 1.5;
+    flex-grow: 1; 
+}
+
+.history_div > img{
+    max-width: 850px;
+    height: auto;
+    padding-right: 30px;
+}
+
+/** ALL ATTRACTIONS + TAB STYLES  **/
+
+#attractions{
+    padding-bottom: 20px;
+}
+
+#attractions > h2{
+    font-family: "League Spartan", sans-serif;
+    font-style: normal;
+    font-size: 70px;
+    color: #322f30;
+    text-align: center;
+    text-shadow: 2px 2px 5px #322f30;
+    padding-top: 20px;
+}
+
+
+.gridLayout{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;   
+}
+
+.grid_img_info{
+    text-align: center;
+    background: #f8f8f8;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.grid_img_info > img{
+    width: 100%;
+    border-radius: 6px;
+}
+
+/** Tabs **/
+#jqtabs{
+    font-family: "Alumni Sans Pinstripe", sans-serif;
+    font-weight: bold;
+    font-size: 23px;
+    line-height: 1.5;
+}
+
+.grid_img_info > h4{
+    font-family: "League Spartan", sans-serif;
+}
+
+
+#jqtabs .ui-tabs-nav{
+    display: flex;
+    justify-content: space-between;
+    background:#f8f8f8;
+    border: none;
+    
+}
+
+#jqtabs .ui-tabs-nav > li{
+    font-family: "League Spartan", sans-serif;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 8px 8px 0px 0px;
+    border: none;
+
+}
+
+#jqtabs .ui-tabs-nav li:hover {
+    color:#f8f8f8;
+    background: #322f30;
+}
+#jqtabs .ui-tabs-nav a:hover {
+    color:#f8f8f8;
+    background: #322f30;
+}
+
+
+/** EVENTS STYLES  **/
+
+#events > h2{
+    font-family: "League Spartan", sans-serif;
+    font-style: normal;
+    font-size: 70px;
+    color: #322f30;
+    text-align: center;
+    text-shadow: 2px 2px 5px #322f30;
+    padding-top: 20px;
+}
+
+#events > p{
+    text-align: center;
+    font-size: 40px;
+}
+
+#eventsDiv > .ui-tabs-nav {
+  border: none;
+  background: transparent;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 30px;
+
+}
+
+#eventsDiv > .ui-tabs-nav li {
+  list-style: none;
+}
+
+#eventsDiv > .ui-tabs-nav li a {
+  color: #322f30;
+  padding: 10px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/** make a grid for each tab - cards 3 in row **/
+.events_gridLayout{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;  
+    padding-top: 30px;
+}
+
+.event_info {
+    display: flex;
+    flex-direction: column;
+    background: #f8f8f8; /* temporary*/
+    color: #322f30;
+    padding-top: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+
+}
+
+.event_img {
+   width: 100%;
+   border-radius: 6px;  
+}
+
+/** TRIP PLANNER SECTION STYLES WEB STORAGE **/
+
+#planner{
+    background: #f8f8f8;
+    padding: 20px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#planner > h2{
+    font-family: "League Spartan", sans-serif;
+    font-style: normal;
+    font-size: 70px;
+    color: #322f30;
+    text-align: center;
+    text-shadow: 2px 2px 5px #322f30;
+    padding-top: 20px;
+}
+
+#planner > p{
+    text-align: center;
+    font-size: 40px;
+}
+
+#user_input{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding-top: 20px;
+    
+    margin-bottom: 20px;
+    background-color: lightgray;
+    border-radius: 6px;
+   
+}
+
+#user_input > label{
+    
+    font-size:30px;
+}
+
+#plan_input{
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 8px;
+
+}
+
+#add_btn, #clear_btn {
+    width: 10%;
+    height: 10%;
+    margin-top: 30px; /* shifts button down to plan_input */
+    margin-left: 10px; /* shifts button more to the right of plan_input, creates gap */
+    padding: 25px 8px 25px 8px;
+    border-radius: 11px;
+    background-color: #f8f8f8;
+    color: #322f30;
+    border: none;
+    cursor: pointer;
+}
+
+#planner_list{   
+    margin-top: 20px;
+    margin-bottom: 100px;
+    margin-right: 100px;
+    margin-left: 40px;   
+    padding-left: 50px;
+    padding-right: 40px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+
+
+    font-size: 25px;
+    font-weight: bold;
+    
+    color:#f8f8f8;
+    border-radius: 8px;
+}
+
+#planner_list.has_items{
+    background-color: #322f30;
+}
+
+
+
+
+/** GALLERY SECTION STYLES **/
+#gallery > h2{
+    font-family: "League Spartan", sans-serif;
+    font-style: normal;
+    font-size: 70px;
+    color: #322f30;
+    text-align: center;
+    text-shadow: 2px 2px 5px #322f30;
+    padding-top: 20px;
+}
+
+#gallery > p{
+    text-align: center;
+    font-size: 40px;
+}
+
+.rows {
+    display: flex;          /* horizontal flex container for the columns */
+    gap: 20px;              /* space between columns */
+    align-items: flex-start; /* allows uneven column heights */
+    justify-content: center;
+}
+
+.columns {
+    display: flex;
+    flex-direction: column; /* stack images top-to-bottom */
+    gap: 20px;              /* vertical spacing between images */
+    flex: 1;                /* all columns share equal width */
+    max-width: 300px; 
+}
+
+.columns > img {
+    width: 100%;           
+    height: auto;           
+}
+
+/** INFO SECTION STYLES **/
+#info > h2{
+    font-family: "League Spartan", sans-serif;
+    font-style: normal;
+    font-size: 70px;
+    color: #322f30;
+    text-align: center;
+    text-shadow: 2px 2px 5px #322f30;
+    padding-top: 20px;
+}
+
+#info > p{
+    text-align: center;
+    font-size: 40px;
+}
+
+#info h3{
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.info_rows{
+    display: flex;          /* horizontal flex container for the columns */
+    gap: 20px;              /* space between columns */
+    justify-content: space-between;
+    background-color: #f8f8f8;
+    margin-top:25px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.info_columns{
+    display: flex;
+    flex-direction: column; /* stack images top-to-bottom */
+    gap: 20px;              /* vertical spacing between images */
+    flex: 1;                /* all columns share equal width */
+    max-width: 300px;
+    text-align: center;
+}
+
+.info_columns img {
+    width: 150px;      /* adjust this to make logos smaller or bigger */
+    height: auto;
+    margin: 5px auto 10px;
+    display: block;
+}
+.info_columns p {
+    font-size: 25px;  /* adjust this to make logos smaller or bigger */
+
+}
+
+/** FOOTER SECTION STYLES **/
+footer > div{
+    text-align: center;
+    background-color: #322f30;
+    color: #f8f8f8;
+    padding: 30px 10px 10px 30px;   
+}
