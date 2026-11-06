@@ -49,11 +49,11 @@ The goal is to create an all-encompassing city guide that helps travelers and lo
   
   - **City-Specific Websites:** Expand the platform with individual destinations such as DISCOVER NEW YORK, DISCOVER MIAMI, DISCOVER LOS ANGELES and more.
   
-  - **Reusable Website Structure:** Build a scalable foundation that allows new city destinations to share a consistent layout, features, and user experience while maintaining their own unique identity.
+  - **Reusable Website Structure:** Build a scalable foundation that allows new city destinations to share a consistent layout, features and user experience while maintaining their own unique identity.
   
   - **Expanded Discovery Categories:** Incorporate more ways to explore each destination, including restaurants, outdoor activities, cultural experiences, shopping, local events and hidden gems.
   
-  - **Interactive Features:** Explore additional functionality such as personalized recommendations, saved destinations, and trip-planning tools.
+  - **Interactive Features:** Explore additional functionality such as personalized recommendations, saved destinations and trip-planning tools.
   
   - **Long-Term Vision:** Transform DISCOVER into a centralized travel resource where users can explore destinations across the United States and eventually beyond.</p>
   
@@ -73,15 +73,17 @@ The goal is to create an all-encompassing city guide that helps travelers and lo
 ***
 
 <h3>🖌️ Design & Branding</h3>
-<p>The visual direction of Discover Boston focuses on presenting the city through a combination of photography, organized content and interactive elements.
+<p>The brainstorming process consist of creating the logo, color palette and gathering inspiration from the various city life experience in Boston.</p>
 
 
 
-<img src="assets/" alt="" width="47%"><img src="assets/" alt="" width="47%">
+<img src="assets/DB BRANDING INSPO.png" alt="Branding brainstorm created via canva">
 
 ***
 
 <h3>💻 Website Preview</h3>
+<p>The visual direction of Discover Boston focuses on presenting the city through a combination of photography, organized content and interactive elements.</p>
+
 <img src="assets/" alt="" align="left" width="49%"><img src="assets/" alt="" width="49%">
 
 <img src="assets/" alt="" align="left" width="49%"><img src="assets/" alt="" width="49%">
