@@ -84,7 +84,7 @@ The goal is to create an all-encompassing city guide that helps travelers and lo
 <h3>💻 Website Preview</h3>
 <p>The visual direction of Discover Boston focuses on presenting the city through a combination of photography, organized content and interactive elements.</p>
 
-<img src="assets/" alt="" align="left" width="49%"><img src="assets/" alt="" width="49%">
+<img src="assets/2.png" alt="" align="left" width="49%"><img src="assets/3.png" alt="" width="49%">
 
-<img src="assets/" alt="" align="left" width="49%"><img src="assets/" alt="" width="49%">
+<img src="assets/4.png" alt="" align="left" width="49%"><img src="assets/5.png" alt="" width="49%">
 
