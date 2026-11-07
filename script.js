@@ -163,4 +163,53 @@ document.addEventListener("DOMContentLoaded", function(){
         else{
             document.getElementById("planner_list").classList.remove("has_items");
         }
+
+
+ // MOBILE NAVIGATION HAMBURGER MENU //
+
+
+// Select navigation elements
+        let menuToggle = document.querySelector("#menu_toggle");
+        let navMenu = document.querySelector("#nav_menu");
+
+        // Open and close dropdown
+        if (menuToggle && navMenu) {
+
+            menuToggle.addEventListener("click", function() {
+
+                navMenu.classList.toggle("active");
+
+                let isOpen = navMenu.classList.contains("active");
+
+                menuToggle.setAttribute("aria-expanded", isOpen);
+
+                menuToggle.setAttribute(
+                    "aria-label",
+                    isOpen ? "Close navigation menu" : "Open navigation menu"
+                );
+
+                menuToggle.textContent = isOpen ? "✕" : "☰";
+
+            });
+
+            // Close dropdown after selecting a link
+
+            let navLinks = navMenu.querySelectorAll("a");
+
+            navLinks.forEach(function(link) {
+
+                link.addEventListener("click", function() {
+
+                    navMenu.classList.remove("active");
+
+                    menuToggle.textContent = "☰";
+                    menuToggle.setAttribute("aria-expanded", "false");
+                    menuToggle.setAttribute("aria-label", "Open navigation menu");
+
+                });
+
+            });
+
+        }  
+
 });

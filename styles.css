@@ -22,19 +22,22 @@
 
 #logo{
     width: 17em;
+    max-width: 100%;
     height: auto;
-    padding-top: 20px;
-    padding-left: 20px;
+    padding: 10px 0 0 20px;
 }
 
 header{
-	width: 100%;
-    height: 170px;
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
-	padding: 1rem 10px;
-    background-color:  #f8f8f8;
+	position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    min-height: 130px;
+    height: 200px;
+    padding: 5px 10px;
+    background: #f8f8f8;
 
     font-family: "Alumni Sans Pinstripe", sans-serif;
     font-weight: 800;
@@ -46,33 +49,51 @@ body{
 }
 
 /* NAVIGATION USING FLEXBOX*/
-nav > ul{
+nav {
+    position: absolute;
+    top: 5em;
+    z-index: 10;
+}
+
+nav {
+    position: absolute;
+    top: 5em;
+    right: 20px;
+    z-index: 10;
+}
+
+nav > ul {
     display: flex;
     justify-content: flex-end;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 5px;
+
     list-style: none;
-    margin-bottom: 0;
+    margin: 0;
     padding: 15px;
-    padding-left: 650px;
-    position: absolute; 
-    top: 5em; /* Aligning it to the top */
-    /*right: 0; /* Aligning it to the right */
-    margin-right:-120px;
 }
 
-nav > li{
-    display: inline;  
-    
-    
+nav > ul > li {
+    margin: 0;
 }
 
-a{
-    text-decoration: none;
+nav > ul > li > a {
+    display: block;
+    padding: 15px;
+    font-size: 25px;
     color: black;
-    padding: 15px;
-    font-size: 25px; /* Makes font size bigger in nav*/
+    text-decoration: none;
 }
+
+
 li > a:hover{
     text-decoration: underline;
+}
+
+/* Hide hamburger on desktop */
+#menu_toggle {
+    display: none;
 }
 
 /** SLIDESHOW/CAROUSEL STYLES**/
@@ -85,86 +106,94 @@ li > a:hover{
 }
 
 /* Carousel Container*/
+#carousel_container {
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 0;
+}
+
 .carousel{
     width: 100%;
     height: 600px;
-
 }
 
-.carousel > img{
-    max-width: 100%;
-    height: auto;
+.carousel .slick-list,
+.carousel .slick-track,
+.carousel .slide{
+    height: 600px;
+}
+
+.slide {
+    position: relative;
+    overflow: hidden;
+}
+
+.resize {
     display: block;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
-.resize{
+.slide_caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
     width: 100%;
-    height: 80%;
+    transform: translate(-50%, -50%);
+    text-align: center;
 }
 
-.slide_caption{
-    
-    padding-bottom: 200px;
-    
-}
 .slide_caption > h2{
     font-family: "League Spartan", sans-serif;
     font-style: normal;
     font-size: 100px;
     text-align: center;
-    color: #322f30;
+    
+    color: whitesmoke;
     text-shadow: 2px 2px 5px black; 
     letter-spacing: 10px;
 }
 
- h2 > span{
-    font-family: "Alumni Sans Pinstripe", sans-serif;
-    font-weight: 400;
-    font-style: italic;
-
-    letter-spacing: 10px;
-    color: #322f30; 
-}
-
 /** HISTORY/INTRO SECTION **/
 
-#history > div{
-    display: flex;
+/* HISTORY SECTION */
+
+.history_div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
-    gap: 20px;
+    gap: 30px;
+    width: 100%;
+    padding: 40px;
+}
+
+.history_div > h2 {
+    position: static;
+    grid-column: 1 / -1;
+    padding: 0;
+    margin: 0;
+
     text-align: center;
-    background-color: #f8f8f8;  
-    padding-top: 4rem;
-    padding-bottom: 2rem;  
-}
-
-.history_div > h2{
     font-family: "League Spartan", sans-serif;
-    font-weight: bold;
-    font-style: normal;
     font-size: 70px;
-    color: #f8f8f8;
-    position: absolute;
-    text-shadow: 5px 5px 5px #322f30;
-    padding-bottom: 2rem;
-    padding-left: 30rem;
-    margin-bottom: 100px;
-}
-
-.history_div > p{
     color: #322f30;
-    font-size: 30px;
-    padding-left: 25px ;
-    line-height: 1.5;
-    flex-grow: 1; 
+    text-shadow: 2px 2px 5px #322f30;
 }
 
-.history_div > img{
-    max-width: 850px;
+.history_div > p {
+    grid-column: 1;
+    margin: 0;
+    font-size: 30px;
+}
+
+.history_div > img {
+    grid-column: 2;
+    grid-row: 2;
+    width: 100%;
+    max-width: 950px;
     height: auto;
-    padding-right: 30px;
-    
+    object-fit: cover;
 }
 
 /** ALL ATTRACTIONS + TAB STYLES  **/
@@ -492,3 +521,433 @@ footer > div{
 }
 
 /** MEDIA QUERIES **/
+
+/* TABLET: 1024px AND BELOW */
+@media screen and (max-width: 1024px){
+
+    #container{
+        width: 100%;
+        padding: 0;
+    }
+
+    /* HEADER AND NAVIGATION */
+
+    #logo{
+        width: 14em;
+    }
+
+    nav > ul > li > a{
+        font-size: 20px;
+        padding: 10px;
+    }
+
+    /* CAROUSEL */
+
+    .carousel,
+    .carousel .slick-list,
+    .carousel .slick-track,
+    .carousel .slide{
+        height: 450px;
+    }
+
+    .slide_caption > h2{
+        font-size: 75px;
+    }
+
+    /* HISTORY */
+
+    .history_div{
+        padding: 30px;
+    }
+
+    .history_div > h2{
+        font-size: 55px;
+    }
+
+    .history_div > p{
+        font-size: 24px;
+    }
+
+    /* ATTRACTIONS */
+
+    #attractions > h2{
+        font-size: 55px;
+    }
+
+    .gridLayout{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    /* EVENTS */
+
+    #events > h2{
+        font-size: 55px;
+    }
+
+    #events > p{
+        font-size: 30px;
+    }
+
+    .events_gridLayout{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    /* TRIP PLANNER */
+
+    #planner > h2{
+        font-size: 55px;
+    }
+
+    #planner_list{
+        margin: 30px 20px;
+    }
+
+    #add_btn,
+    #clear_btn{
+        width: auto;
+    }
+
+    /* GALLERY */
+
+    .columns{
+        flex: 1;
+        max-width: none;
+    }
+
+    /* INFO */
+
+    .info_columns{
+        max-width: 250px;
+    }
+}
+
+/* SMALL TABLET: 768px AND BELOW */
+@media screen and (max-width: 768px){
+
+    /* HEADER AND NAVIGATION */
+
+    header{
+        align-items: center;
+        padding: 15px;
+    }
+
+    #logo{
+        width: 12em;
+        padding: 10px 0;
+    }
+
+    nav {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 100;
+    }
+
+    /* Hamburger button */
+    #menu_toggle {
+        display: block;
+        font-size: 30px;
+        background: none;
+        border: none;
+        color: black;
+        cursor: pointer;
+    }
+
+    /* Hide navigation links initially */
+    nav > ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 200px;
+        padding: 10px;
+        margin: 0;
+        background-color: #f8f8f8;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Display dropdown when activated */
+    nav > ul.active {
+        display: flex;
+    }
+
+    /* Individual navigation links */
+    nav > ul > li > a {
+        display: block;
+        padding: 12px;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    /* CAROUSEL */
+
+    .carousel,
+    .carousel .slick-list,
+    .carousel .slick-track,
+    .carousel .slide{
+        height: 350px;
+    }
+
+    .slide_caption > h2{
+        font-size: 55px;
+    }
+
+    /* HISTORY */
+
+    .history_div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 25px;
+    }
+
+    .history_div > h2{
+        width: 100%;
+        font-size: 45px;
+        text-align: center;
+    }
+
+    .history_div > p{
+        font-size: 22px;
+        text-align: left;
+    }
+
+    .history_div > img{
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* ATTRACTIONS */
+
+    #attractions > h2{
+        font-size: 45px;
+        text-align: center;
+    }
+
+    #jqtabs > ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .gridLayout{
+        grid-template-columns: 1fr;
+    }
+
+    /* EVENTS */
+
+    #events > h2{
+        font-size: 45px;
+    }
+
+    #events > p{
+        font-size: 25px;
+    }
+
+    #eventsDiv > ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .events_gridLayout{
+        grid-template-columns: 1fr;
+    }
+
+    /* TRIP PLANNER */
+
+    #planner > h2{
+        font-size: 45px;
+    }
+
+    #user_input{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    #user_input > label{
+        width: 100%;
+    }
+
+    #plan_input{
+        width: 100%;
+    }
+
+    #planner_list{
+        flex-basis: 100%;
+        width: 100%;
+        margin: 20px 0;
+        padding-left: 30px;
+    }
+
+    #add_btn,
+    #clear_bt{
+        width: auto;
+    }
+
+    /* GALLERY */
+
+    .rows{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .columns{
+        flex: 0 0 50%;
+        max-width: 50%;
+        padding: 5px;
+    }
+
+    /* INFO */
+
+    .info_rows{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 25px;
+    }
+
+    .info_columns{
+        flex: 0 0 45%;
+        max-width: 45%;
+    }
+}
+
+
+
+/* MOBILE: 600px AND BELOW */
+@media screen and (max-width: 600px){
+
+    /* HEADER AND NAVIGATION */
+
+    #logo {
+        width: 11em;
+    }
+
+    nav > ul {
+        gap: 2px;
+    }
+
+    nav > ul > li > a {
+        font-size: 15px;
+        padding: 7px 5px;
+    }
+
+    /* CAROUSEL */
+
+    .carousel,
+    .carousel .slick-list,
+    .carousel .slick-track,
+    .carousel .slide {
+        height: 280px;
+    }
+
+    .slide_caption > h2 {
+        font-size: 40px;
+    }
+
+    /* HISTORY */
+
+    .history_div {
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .history_div > h2 {
+        font-size: 36px;
+    }
+
+    .history_div > p {
+        font-size: 20px;
+    }
+
+    /* SECTION HEADINGS */
+
+    #attractions > h2,
+    #events > h2,
+    #planner > h2 {
+        font-size: 36px;
+        text-align: center;
+    }
+
+    #events > p,
+    #planner > p {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    /* JQUERY UI TABS */
+
+    #jqtabs > ul,
+    #eventsDiv > ul {
+        padding: 5px;
+    }
+
+    #jqtabs > ul > li > a,
+    #eventsDiv > ul > li > a {
+        font-size: 15px;
+        padding: 8px;
+    }
+
+    /* TRIP PLANNER */
+
+    #user_input {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 15px;
+    }
+
+    #user_input > label {
+        font-size: 20px;
+    }
+
+    #plan_input {
+        width: 100%;
+    }
+
+    #add_btn,
+    #clear_btn {
+        width: 100%;
+        padding: 10px;
+    }
+
+    #planner_list {
+        font-size: 20px;
+    }
+
+    /* GALLERY */
+
+    .columns {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    /* INFO */
+
+    .info_columns {
+        flex: 0 0 100%;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .info_columns img {
+        width: 130px;
+        height: auto;
+    }
+
+    /* FOOTER */
+
+    footer {
+        padding: 20px 10px;
+        text-align: center;
+    }
+
+    footer small {
+        font-size: 12px;
+    }
+
+}
