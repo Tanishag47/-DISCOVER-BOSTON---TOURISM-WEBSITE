@@ -8,11 +8,12 @@
 /* ------------------------------------------------------------------------ */
 *{
     box-sizing: border-box;
+
+    /* --outline: 1px solid red; */
 }
 
 #container{
-    max-width: 1280px;
-    width: 100%;
+    max-width: auto;
     margin: 0 auto;
 }
 
@@ -45,7 +46,14 @@ header{
 }
 
 body{
+    margin: 0;
+    width: 100%;
+    overflow-x: hidden;
     font-family: "Alumni Sans Pinstripe", sans-serif;
+}
+
+html{
+   overflow-x: hidden; 
 }
 
 /* NAVIGATION USING FLEXBOX*/
@@ -184,6 +192,7 @@ li > a:hover{
 .history_div > p {
     grid-column: 1;
     margin: 0;
+    text-align: center;
     font-size: 30px;
 }
 
@@ -364,10 +373,11 @@ li > a:hover{
 #user_input{
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 10px;
     padding-top: 20px;
     
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     background-color: lightgray;
     border-radius: 6px;
    
@@ -441,24 +451,32 @@ li > a:hover{
     font-size: 40px;
 }
 
-.rows {
-    display: flex;          /* horizontal flex container for the columns */
-    gap: 20px;              /* space between columns */
-    align-items: flex-start; /* allows uneven column heights */
-    justify-content: center;
+/* Gallery Layout (for Desktop) */
+
+#gallery_slider {
+    width: 100%;
+    margin: 30px auto;
 }
 
-.columns {
-    display: flex;
-    flex-direction: column; /* stack images top-to-bottom */
-    gap: 20px;              /* vertical spacing between images */
-    flex: 1;                /* all columns share equal width */
-    max-width: 300px; 
+.gallery_slide{
+    padding: 15px;
 }
 
-.columns > img {
-    width: 100%;           
-    height: auto;           
+.gallery_slide > img{
+    display: block;
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.gallery_slide.slick-center > img { /* Emphasizes the centered image */
+    transform: scale(1.08); 
+}
+
+#gallery_slider .slick-list {
+    overflow: hidden;
 }
 
 /** INFO SECTION STYLES **/
@@ -646,7 +664,7 @@ footer > div{
     }
 
     /* Hamburger button */
-    #menu_toggle {
+    #menu_toggle{
         display: block;
         font-size: 30px;
         background: none;
@@ -656,7 +674,7 @@ footer > div{
     }
 
     /* Hide navigation links initially */
-    nav > ul {
+    nav > ul{
         display: none;
         flex-direction: column;
         position: absolute;
@@ -670,12 +688,12 @@ footer > div{
     }
 
     /* Display dropdown when activated */
-    nav > ul.active {
+    nav > ul.active{
         display: flex;
     }
 
     /* Individual navigation links */
-    nav > ul > li > a {
+    nav > ul > li > a{
         display: block;
         padding: 12px;
         font-size: 18px;
@@ -771,10 +789,11 @@ footer > div{
 
     #user_input > label{
         width: 100%;
+        
     }
 
     #plan_input{
-        width: 100%;
+        width: 90%;
     }
 
     #planner_list{
@@ -785,24 +804,17 @@ footer > div{
     }
 
     #add_btn,
-    #clear_bt{
-        width: auto;
+    #clear_btn{
+        width: 50%;
     }
 
     /* GALLERY */
 
-    .rows{
-        display: flex;
-        flex-wrap: wrap;
+        .gallery_slide > img{
+        height: 300px;
     }
 
-    .columns{
-        flex: 0 0 50%;
-        max-width: 50%;
-        padding: 5px;
-    }
-
-    /* INFO */
+     /* INFO */
 
     .info_rows{
         display: flex;
@@ -815,24 +827,23 @@ footer > div{
         flex: 0 0 45%;
         max-width: 45%;
     }
+
 }
-
-
 
 /* MOBILE: 600px AND BELOW */
 @media screen and (max-width: 600px){
 
     /* HEADER AND NAVIGATION */
 
-    #logo {
+    #logo{
         width: 11em;
     }
 
-    nav > ul {
+    nav > ul{
         gap: 2px;
     }
 
-    nav > ul > li > a {
+    nav > ul > li > a{
         font-size: 15px;
         padding: 7px 5px;
     }
@@ -842,40 +853,41 @@ footer > div{
     .carousel,
     .carousel .slick-list,
     .carousel .slick-track,
-    .carousel .slide {
+    .carousel .slide{
         height: 280px;
     }
 
-    .slide_caption > h2 {
+    .slide_caption > h2{
         font-size: 40px;
     }
 
     /* HISTORY */
 
-    .history_div {
+    .history_div{
         padding: 20px;
         gap: 15px;
     }
 
-    .history_div > h2 {
+    .history_div > h2{
         font-size: 36px;
     }
 
-    .history_div > p {
+    .history_div > p{
         font-size: 20px;
+        text-align: center;
     }
 
     /* SECTION HEADINGS */
 
     #attractions > h2,
     #events > h2,
-    #planner > h2 {
+    #planner > h2{
         font-size: 36px;
         text-align: center;
     }
 
     #events > p,
-    #planner > p {
+    #planner > p{
         font-size: 22px;
         text-align: center;
     }
@@ -883,70 +895,89 @@ footer > div{
     /* JQUERY UI TABS */
 
     #jqtabs > ul,
-    #eventsDiv > ul {
+    #eventsDiv > ul{
         padding: 5px;
     }
 
     #jqtabs > ul > li > a,
-    #eventsDiv > ul > li > a {
+    #eventsDiv > ul > li > a{
         font-size: 15px;
         padding: 8px;
     }
 
     /* TRIP PLANNER */
 
-    #user_input {
+    #user_input{
         flex-direction: column;
-        align-items: stretch;
         padding: 15px;
     }
 
-    #user_input > label {
+    #user_input > label{
         font-size: 20px;
+
     }
 
-    #plan_input {
-        width: 100%;
+    #plan_input{
+        width: 90%;
     }
 
     #add_btn,
-    #clear_btn {
+    #clear_btn{
+        display: flex;
+        justify-content: center; /* Centers horizontally */
+        align-items: center;
         width: 100%;
-        padding: 10px;
+        max-width: 180px;
+        padding: 12px;
+        margin: 5px auto;
+         
     }
 
-    #planner_list {
+    #planner_list{
+        width: 100%;
+        max-width: 100%;
+        margin: 20px 0;
+        padding: 15px 20px;
         font-size: 20px;
+        overflow-wrap: anywhere;
     }
 
     /* GALLERY */
 
-    .columns {
-        flex: 0 0 50%;
-        max-width: 50%;
+    #gallery > p {
+    font-size: 22px;
+    padding: 0 15px;
+}
+
+    .gallery_slide{
+        padding: 8px;
+    }
+
+    .gallery_slide > img{
+        height: 250px;
     }
 
     /* INFO */
 
-    .info_columns {
+    .info_columns{
         flex: 0 0 100%;
         max-width: 100%;
         text-align: center;
     }
 
-    .info_columns img {
+    .info_columns img{
         width: 130px;
         height: auto;
     }
 
     /* FOOTER */
 
-    footer {
+    footer{
         padding: 20px 10px;
         text-align: center;
     }
 
-    footer small {
+    footer small{
         font-size: 12px;
     }
 
