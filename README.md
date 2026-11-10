@@ -1,4 +1,4 @@
-# FINAL PROJECT DISCOVER BOSTON
+# DISCOVER BOSTON - Tourism Website
 
 <img src="Images/MBTA_orange_line.webp" align="right" width="50%">
 
